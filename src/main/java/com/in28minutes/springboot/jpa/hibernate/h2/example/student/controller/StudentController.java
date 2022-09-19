@@ -74,6 +74,7 @@ public class StudentController {
 		if (studentOpt.isEmpty())
 			throw new Exception("Student didn't existed");
 		
+		repository.deleteById(id);
 		return ResponseEntity.ok("Deleted");
 	}
 
